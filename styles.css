@@ -1,8 +1,7 @@
 :root {
-  --color-primario: hsl(154, 50%, 5%);
   --color-secundario: rgba(0, 0, 0, 0.8);
   --color: green;
-  --color-b: #ffff;
+  --color-b: #ffffff; /* Ajustado a blanco puro */
   --fuente: "Orbitron", sans-serif;
   --fuente-b: cursive;
   --fuente-tamano: 1rem;
@@ -20,18 +19,23 @@
 html {
   min-width: 320px;   
   max-width: 1400px;
+  overflow-x: hidden;
 }
 
 body {
   height: 100vh;
+  background-color: var(--color-primario); /* Color de respaldo */
   background-image: url(imagenes/bookcover-7828501.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   font-family: var(--fuente);
+  overflow-x: hidden;
 }
 
+
 .header {
-  height: 10vh;
+  height: 10%;
+  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -48,7 +52,8 @@ body {
 }
 
 .main {
-  height: 90%;
+  height: 100%;
+  min-height: 85vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -60,6 +65,7 @@ body {
   background-color: black;
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 
 }
 
@@ -141,6 +147,7 @@ body {
   width: 25%;
   transition: all 0.3s ease;
   max-width: 150px;
+  overflow-x: hidden;
   text-align: center;
   font-family: var(--fuente-b);
   color: var(--color-b);
@@ -155,6 +162,7 @@ body {
   width: 35%;
   max-width: 150px;
   text-align: center;
+  overflow-x: hidden;
   font-family: var(--fuente-b);
   color: var(--color-b);
   background: var(--color-secundario);
@@ -230,5 +238,48 @@ body {
   }
   100% {
       opacity: 0.5;
+  }
+}
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+  .contenedor, .header {
+    width: 100%;
+  }
+  
+  .encrypt, .decrypt, .copiar {
+    width: 40%;
+    font-size: calc(var(--fuente-tamano) - 0.2rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .contenedor, .header {
+    width: 95%;
+  }
+  
+  .encrypt, .decrypt, .copiar {
+    width: 50%;
+    font-size: calc(var(--fuente-tamano) - 0.3rem);
+  }
+}
+
+@media (max-width: 375px) {
+  .contenedor {
+    width: 95%;
+  }
+  .header {
+    width: 100%;
+  }
+  
+  .titulo_ascii {
+    width: 100%;
+    font-size: 10%;
+
+  }
+
+
+  .encrypt, .decrypt, .copiar {
+    width: 50%;
+    font-size: calc(var(--fuente-tamano) - 0.3rem);
   }
 }
