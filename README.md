@@ -39,5 +39,3 @@ Este proyecto se encuentra en desarrollo activo. Próximamente se planea agregar
 ## Acceso al proyecto
 Puedes acceder al proyecto descargando los archivos o clonando el repositorio desde GitHub. Abre el archivo `index.html` en tu navegador preferido para interactuar con la aplicación.
 
-```bash
-git clone https://github.com/tuusuario/DesafioEncriptadorTexto.git
