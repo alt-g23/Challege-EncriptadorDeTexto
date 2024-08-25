@@ -15,10 +15,16 @@
   padding: 0;
   margin: 0;
 }
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
 
 html {
-  min-width: 320px;   
-  max-width: 1400px;
+  min-width: 320px;
   overflow-x: hidden;
 }
 
@@ -31,7 +37,6 @@ body {
   font-family: var(--fuente);
   overflow-x: hidden;
 }
-
 
 .header {
   height: 10%;
@@ -54,6 +59,8 @@ body {
 .main {
   height: 100%;
   min-height: 85vh;
+  margin: 0 auto;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -66,16 +73,13 @@ body {
   display: flex;
   align-items: center;
   overflow-x: hidden;
-
 }
 
 .info {
   color: #ffffff;
   text-shadow: 0 0 10px #070101, 0 0 20px #e70707, 0 0 30px #f200ff, 0 0 40px #d900ff, 0 0 50px #a20c5c;
   animation: parpadeo 1s infinite alternate;
-
 }
-
 
 /* Contenedor principal */
 .contenedor {
@@ -127,7 +131,6 @@ body {
 }
 
 /* Estilos de los botones */
-
 
 .encrypt:hover {
   text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 40px #2e3dfe, 0 0 80px #2e3dfe;
@@ -221,6 +224,13 @@ body {
   font-size: var(--fuente-tamano);
 }
 
+/*Prueba responsive*/
+img, .texto_area, .mensaje_encriptado {
+  max-width: 100%;
+  max-height: 100%;
+  overflow: hidden;
+}
+
 /* Animaciones */
 @keyframes glow {
   from {
@@ -231,7 +241,6 @@ body {
   }
 }
 
-
 @keyframes parpadeo {
   0% {
       opacity: 1;
@@ -240,6 +249,7 @@ body {
       opacity: 0.5;
   }
 }
+
 /* Media Queries para responsividad */
 @media (max-width: 768px) {
   .contenedor, .header {
@@ -281,5 +291,11 @@ body {
   .encrypt, .decrypt, .copiar {
     width: 50%;
     font-size: calc(var(--fuente-tamano) - 0.3rem);
+  }
+}
+@media (min-width: 1401px) {
+  .contenedor {
+    max-width: 1200px;
+    width: 90%;
   }
 }
