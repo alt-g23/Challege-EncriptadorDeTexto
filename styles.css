@@ -1,0 +1,234 @@
+:root {
+  --color-primario: hsl(154, 50%, 5%);
+  --color-secundario: rgba(0, 0, 0, 0.8);
+  --color: green;
+  --color-b: #ffff;
+  --fuente: "Orbitron", sans-serif;
+  --fuente-b: cursive;
+  --fuente-tamano: 1rem;
+  --fuente-tamano-b: 1.5rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-width: 320px;   
+  max-width: 1400px;
+}
+
+body {
+  height: 100vh;
+  background-image: url(imagenes/bookcover-7828501.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: var(--fuente);
+}
+
+.header {
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.header_titulo {
+  font-family: var(--fuente);
+  color: var(--color-b);
+}
+
+.titulo_ascii {
+  font-size: 0.5rem;
+  color: var(--color-b);
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+.main {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.footer {
+  height: 5vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+
+}
+
+.info {
+  color: #ffffff;
+  text-shadow: 0 0 10px #070101, 0 0 20px #e70707, 0 0 30px #f200ff, 0 0 40px #d900ff, 0 0 50px #a20c5c;
+  animation: parpadeo 1s infinite alternate;
+
+}
+
+
+/* Contenedor principal */
+.contenedor {
+  height: 85%;
+  width: 90%;
+  max-width: 500px;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titulo_encriptador {
+  margin-top: 2em;
+  text-shadow: 0 0 10px #070101, 0 0 20px #e70707, 0 0 30px #f200ff, 0 0 40px #d900ff, 0 0 50px #a20c5c;
+  color: var(--color-b);
+  animation: parpadeo 1s infinite alternate;
+  font-family: var(--fuente);
+}
+
+/* Contenedor de texto de entrada */
+.texto_area {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.text_input {
+  width: 100%;
+  height: 80%;
+  resize: none;
+  font-size: var(--fuente-tamano-b);
+  background-color: hsla(150, 8%, 5%, 0.422);
+  color: var(--color-b);
+}
+
+.pie_texto_area {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* Contenedor de botones */
+.button_encrypt {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* Estilos de los botones */
+
+
+.encrypt:hover {
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 40px #2e3dfe, 0 0 80px #2e3dfe;
+}
+.decrypt:hover {
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 40px #2e3dfe, 0 0 80px #2e3dfe;
+}
+.copiar:hover {
+  text-shadow: 0 0 10px #fff, 0 0 30px #fff, 0 0 40px #2e3dfe, 0 0 80px #2e3dfe;
+}
+
+/* Botón específico */
+.encrypt {
+  margin: auto;
+  border-radius: 32px;
+  height: 40%;
+  width: 25%;
+  transition: all 0.3s ease;
+  max-width: 150px;
+  text-align: center;
+  font-family: var(--fuente-b);
+  color: var(--color-b);
+  background: var(--color-secundario);
+  font-size: var(--fuente-tamano);
+}
+
+.decrypt {
+  margin: auto;
+  border-radius: 32px;
+  height: 40%;
+  width: 35%;
+  max-width: 150px;
+  text-align: center;
+  font-family: var(--fuente-b);
+  color: var(--color-b);
+  background: var(--color-secundario);
+  font-size: var(--fuente-tamano);
+}
+
+.requisitos_txt {
+  font-size: 0.7rem;
+  font-family: var(--fuente-b);
+  margin: 1em;
+  color: var(--color-b);
+  text-shadow: 0 0 10px #ffffffc1, 0 0 20px #ff0000, 0 0 30px #f200ffc0, 0 0 40px #290030, 0 0 50px #008d21;
+}
+
+/* Contenedor de mensaje encriptado */
+.texto_salida {
+  height: 50%;
+  width: 100%;
+}
+
+.mensaje_encriptado {
+  width: 100%;
+  height: 80%;
+  resize: none;
+  overflow: hidden;
+  background-color: hsla(150, 8%, 5%, 0.422);
+  font-size: var(--fuente-tamano-b);
+  font-family: var(--fuente);
+  color: var(--color-b);
+}
+
+.pie_decrypt {
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+
+/* Contenedor de botón copiar */
+.copy_area {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.copiar {
+  margin: auto;
+  border-radius: 32px;
+  height: 85%;
+  width: 40%;
+  max-width: 150px;
+  text-align: center;
+  font-family: var(--fuente-b);
+  color: var(--color-b);
+  background: var(--color-secundario);
+  font-size: var(--fuente-tamano);
+}
+
+/* Animaciones */
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2e3dfe, 0 0 40px #2e3dfe;
+  }
+  to {
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00, 0 0 15px #00ff00, 0 0 20px #ffffff, 0 0 30px #ff4da6, 0 0 40px #ff4da6;
+  }
+}
+
+
+@keyframes parpadeo {
+  0% {
+      opacity: 1;
+  }
+  100% {
+      opacity: 0.5;
+  }
+}

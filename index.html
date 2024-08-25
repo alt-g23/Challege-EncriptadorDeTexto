@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" href="styles.css">
+    <title>Desafio Encriptador</title>
+</head>
+<body>
+    <header class="header">
+        <pre class="titulo_ascii">
+            ___   _       _   _   _____        ___        _           ___   _____       ___       ___  ___       __    __       _____   _____        ___   _____   _       _____  
+            /   | | |     | | | | |  _  \      /   |      | |         /   | |_   _|     /   |     /   |/   |      \ \  / /      /  _  \ |  _  \      /   | /  ___| | |     | ____| 
+           / /| | | |     | | | | | |_| |     / /| |      | |        / /| |   | |      / /| |    / /|   /| |       \ \/ /       | | | | | |_| |     / /| | | |     | |     | |__   
+          / / | | | |     | | | | |  _  /    / / | |      | |       / / | |   | |     / / | |   / / |__/ | |        \  /        | | | | |  _  /    / / | | | |     | |     |  __|  
+         / /  | | | |___  | |_| | | | \ \   / /  | |      | |___   / /  | |   | |    / /  | |  / /       | |        / /         | |_| | | | \ \   / /  | | | |___  | |___  | |___  
+        /_/   |_| |_____| \_____/ |_|  \_\ /_/   |_|      |_____| /_/   |_|   |_|   /_/   |_| /_/        |_|       /_/          \_____/ |_|  \_\ /_/   |_| \_____| |_____| |_____| 
+        </pre> 
+    </header>
+    <main class="main">
+        <section class="titulo_encriptador">
+            <h2>Encriptador de texto</h2>
+        </section>
+
+        <section class="contenedor">
+                <div class="texto_area">
+                    <textarea class="text_input" cols="30" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+                    <section class="pie_texto_area">
+
+                        <div>
+                            <p class="requisitos_txt">
+                                >No usar mayusculas<br>
+                                >No usar acentos<br>
+                                >No usar caracrteres especiales<br>
+                             </p>
+                        </div>
+                        <div class="button_encrypt">
+                            <button class="encrypt" onclick="btnencriptar()">Encriptar</button>
+                            <button class="decrypt" onclick="btndesencripta()">Desencriptar</button>
+                        </div>
+
+                    </section>
+
+                </div>
+
+                <section class="texto_salida">
+
+                    <textarea class="mensaje_encriptado" cols="30" rows="10" readonly></textarea>
+                    <section class="pie_decrypt">
+                        <div class="copy_area">
+                            <button class="copiar" onclick="copiarTexto()">Copiar</button>
+    
+                        </div>
+
+                    </section>
+
+
+                </section>
+        </section>
+
+        <script src="script.js"></script>
+        
+    </main>
+
+    <footer class="footer">
+        <h4 class="info">2024 - Desarrollado por Lisandro Vila - Challenge Encriptador de texto - Alura latam</h4>
+    </footer>
+     
+
+</body>
+</html>
